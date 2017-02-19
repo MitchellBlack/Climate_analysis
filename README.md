@@ -1,4 +1,4 @@
-# Code for analysing and visualising gridded climate model output
+# Code for analysing and visualising climate data
 
 For a full list of plotting options, use the help command (`-h`)
 
