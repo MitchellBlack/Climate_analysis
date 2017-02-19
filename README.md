@@ -1,11 +1,8 @@
 # Code for analysing and visualising gridded climate model output
 
-**Author: Mitchell Black (mtblack@student.unimelb.edu.au)**
+For a full list of plotting options, use the help command (`-h`)
 
-
-> For a full list of plotting options, use the help command (`-h`)
-
-e.g., `python plot_hist.py -h` provides the following user manual
+e.g., `python plot_hist.py -h` provides the following user manual:
 
 ```
 usage: plot_hist.py [-h] [--infile [INFILE [INFILE ...]]] [--varname VARNAME]
@@ -19,7 +16,17 @@ usage: plot_hist.py [-h] [--infile [INFILE [INFILE ...]]] [--varname VARNAME]
                     [--label_mean {True,False}]
                     [--plot_threshold PLOT_THRESHOLD] [--ofile OFILE]
 
-Plot histogram from NetCDF file(s)
+required arguments:
+  --infile [INFILE [INFILE ...]]
+                        Input file name(s) - can use wildcard '*.nc' or infile
+                        '.list'
+  --varname VARNAME     Input file variable
+  --units UNITS         Units for plotting
+  --color COLOR         Color of timeseries (inc. hexcode, e.g. ~hash~31a354
+  --lgnd_label LGND_LABEL
+                        Timeseries label for figure legend
+  --plot_kde {True,False}
+                        plot kernel density estimate [default: False]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -45,17 +52,7 @@ optional arguments:
                         Plot threshold as vertical line [default: None]
   --ofile OFILE         Name of ouput file [default: None]
 
-required arguments:
-  --infile [INFILE [INFILE ...]]
-                        Input file name(s) - can use wildcard '*.nc' or infile
-                        '.list'
-  --varname VARNAME     Input file variable
-  --units UNITS         Units for plotting
-  --color COLOR         Color of timeseries (inc. hexcode, e.g. ~hash~31a354
-  --lgnd_label LGND_LABEL
-                        Timeseries label for figure legend
-  --plot_kde {True,False}
-                        plot kernel density estimate [default: False]
+
 
 Usage:
     python plot_hist.py -h
